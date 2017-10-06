@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, Helvetica, sans-serif; }
+
+p {
+  font-size: 28px; }
+
+.picture-container {
+  width: 90%;
+  margin: 0 auto; }
+  .picture-container picture img {
+    max-width: 100%; }
+  .picture-container picture:hover {
+    -webkit-filter: brightness(50%) sepia(1) hue-rotate(101deg) saturate(445.5%) brightness(107%);
+    filter: brightness(50%) sepia(1) hue-rotate(101deg) saturate(445.5%) brightness(107%); }

@@ -1,0 +1,38 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import 'http://fonts.googleapis.com/css?family=Share:400,700';
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700s';
+
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+.albumList {
+  list-style-type: none;
+}
+
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: rgba(120, 120, 120, 0.3);
+}
+
+.content .albumList li {
+  font-size: 10pt;
+}
+
+.albumList .fav {
+  font-weight: 600;
+  color: magenta;
+  font-size: 12pt;
+}
+
+.fav {
+  font-size: 14pt;
+  color: darkblue;
+  text-decoration: underline;
+}
+
+br {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

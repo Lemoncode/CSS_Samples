@@ -1,0 +1,91 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.site-content {
+  flex-grow: 1;
+}
+
+
+.header-container {
+    background-color: black;
+    border-bottom: 3px solid yellowgreen;
+    height: 5em;
+}
+
+h1 {
+    margin-top: 2%;
+}
+
+.footer-container {
+    height: 5em;
+    width: 100%;
+    background-color: black;
+    border-top: 3px solid yellowgreen;
+    margin-top: 10px;
+}
+
+.main-title {
+    text-align: center;
+}
+
+section {
+    float: left;
+    width: 30.33%;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+section h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+ul {
+   list-style-type: armenian;
+   margin-top: 5%;
+   text-align: center;
+}
+
+ul li {
+    list-style-position: inside;
+    margin-top: 2%;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 720px) {
+    .footer-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    section {
+        width: 100%;
+    }
+
+    .footer-container {
+        display: none;
+    }
+
+    .header-container {
+      display: none;
+    }
+}

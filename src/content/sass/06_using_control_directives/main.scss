@@ -1,0 +1,78 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import "init";
+@import "mixins.scss";
+@import "functions.scss";
+
+// References: http://thesassway.com/
+
+$baseFontSize: 1.5em;
+$offSectionColor: black;
+$numberOfColumns: 2; // 6
+
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: $baseFontSize;
+}
+
+header {
+  @include off-section($offSectionColor);
+  border-bottom: calculateBorderOffSection($baseFontSize, 3);
+  @include nav-off($baseFontSize);
+
+  h1 {
+    padding-top: 0.3em;
+    padding-left: 0.3em;
+    font: {
+      size: $baseFontSize;
+      color: white;
+    }
+  }
+}
+
+// @include calculate-columns($numberOfColumns);
+
+// TODO: Change media queries range
+
+@media screen and (min-width: 500px) {
+  @include calculate-columns(2);
+}
+
+@media screen and (min-width: 1200px) {
+  @include calculate-columns(6);
+}
+
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+
+  div:nth-of-type(2n + 1) {
+    background-color: lighten(yellow, 25%);
+  }
+
+  div:nth-of-type(2n) {
+    background-color: lighten(cyan, 25%);
+  }
+}
+
+.col-1 {
+  height: 12em;
+}
+
+.col-2 {
+  height: 12em;
+}
+
+footer {
+  @include off-section($offSectionColor);
+  border-top: calculateBorderOffSection($baseFontSize, 3);
+  @include nav-off($baseFontSize);
+  position: fixed;
+  bottom: 0;
+
+  p {
+    text-align: center;
+    color: white;
+    font-size: $baseFontSize * 0.5;
+    margin-top: 1em;
+  }
+}

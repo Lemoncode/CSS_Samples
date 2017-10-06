@@ -1,0 +1,30 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+body {
+    font-size: 80%;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+p {
+    font-size: xx-large; /*Using keyword
+    /*font-size: 28pt;*/ /*Using points*/
+    /*font-size: 1.0em; /*Using relative em. This is the current size for the page*/
+    /*font-size: 1.5em;*/ /*Represents a 50% bigger*/
+    border-style:solid;
+    border-color:black;
+    border-width: thin; /*we can specify using pixels mm cm */
+    width: 50%; /*it sets the 50% relative to its parent, in this case the window. px*/
+}
+
+div {
+    width: 50%; /*The paragraph inside of the div will be 25%, because the p element has to be the 50% relative to its parent, in this case the div.*/
+}

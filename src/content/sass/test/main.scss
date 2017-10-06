@@ -1,0 +1,226 @@
+// Variables declaration
+$baseSize: 14px;
+
+// External imports
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import 'http://fonts.googleapis.com/css?family=Share:400,700';
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700s';
+
+// Local imports
+@import "init";
+@import "colors.scss";
+@import "mixins";
+@import "palate";
+
+
+$mainColor: green;
+
+
+@mixin addingLighten($numberOfColumns: 1) {
+  @for $colNumber from 1 through $numberOfColumns {
+    .col-#{$colNumber} {
+       border-radius: 25px;
+       border: 2px solid black;
+       padding: 20px;
+       width: 200px;
+       height: 50px;
+       background-color: paintLighten($mainColor, $colNumber);
+    }
+  }
+}
+
+@function paintLighten($color, $colNumber) {
+//  @debug 'paintLighten: ' + $color + ' - ' + $colNumber;
+    @return lighten($color, 10%*$colNumber) ;
+}
+
+$mainColors: calculatePalate(10, #00ff00);
+
+.test {
+  background-color: nth($mainColors, 3);
+}
+
+/* Basics */
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: $baseSize;
+}
+
+body {
+    background: $mainColor;
+}
+
+h1 {
+    font-size: $baseSize + 10;
+}
+
+h2 {
+    font-size:  $baseSize  + 4;
+}
+
+h3 {
+    font-size: $baseSize  + 2;
+}
+
+/* Layout */
+.container {
+    width: 1200px;
+    height: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    background: #FFF;
+    padding: 25px;
+    color: $mainColor;
+}
+
+/* Sections */
+/*este comentario aparece compilado*/
+// este comentario no aparece compilado
+header {
+  @include header-footer-box-initialization;
+  h1 {
+    font {
+      size: $baseSize + 10;
+      family: 'Share', cursive;
+    }
+    color: yellowgreen;
+  }
+}
+
+nav {
+  font {
+    size: $baseSize;
+    weight: bold;
+  }
+  float: right;
+  color: white;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      float: left;
+      margin: 2px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        text-decoration: underline;
+        color: yellowgreen;
+      }
+    }
+  }
+}
+
+footer {
+    font-size: $baseSize + 4;
+    text-align: center;
+    color: white;
+
+    // position: fixed;
+    // left: 0px;
+    // bottom: 0px;
+    @include set-footer-position;
+    width: 97%;
+
+    @include header-footer-box-initialization;
+    // padding-left: 30px;
+    // padding-right: 30px;
+    // padding-top: 30px;
+    // min-height: 70px;
+    //
+    // border-top: 5px solid greenyellow;
+    // background-color: lighten($mainColor, 25%);
+}
+
+
+/* Forms */
+.contact-form {
+    background: #f8f8f8;
+    // width: 480px;
+    height: 380px;
+    // margin-left: auto;
+    // margin-right: auto;
+    // border: black 2px solid;
+    // padding: 5px;
+    @include content-sections-initialization;
+    input[type=text] {
+      font-family: "Open Sans", Verdana, Helvetica, sans-serif;
+      font-size: $baseSize + 4;
+      background: #e6e6e6;
+      width: 350px;
+      border: 1px #000 solid;
+      float: right;
+    }
+
+    textarea {
+      @extend input[type=text];
+      height: 100px;
+      // font-family: "Open Sans", Verdana, Helvetica, sans-serif;
+      resize: none;
+    }
+}
+
+.form-statement {
+    padding: 20px;
+    display: block;
+}
+
+// .contact-form textarea {
+//     height: 100px;
+//     font-family: "Open Sans", Verdana, Helvetica, sans-serif;
+//     resize: none;
+// }
+.contact-form label {
+    width: 150px;
+}
+
+.contact-form input[type=submit] {
+    float: right;
+    border: 2px solid yellowgreen;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+
+.form-submit {
+    display: block;
+    margin-top: 100px;
+}
+
+.about {
+    background-color: white;
+    width: 480px;
+    height: 275px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border: black 2px solid;
+    padding: 5px;
+
+    img {
+      max-width: 50%;
+      max-height: 50%;
+      padding: 5px;
+
+      &:hover {
+        // -webkit-filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
+        // filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
+        @include image-transparent-cover;
+      }
+    }
+}
+
+footer {
+  p {
+    &:after {
+      margin-left: 5px;
+      content: '\00A9';
+    }
+  }
+}

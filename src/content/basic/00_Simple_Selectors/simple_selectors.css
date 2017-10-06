@@ -1,0 +1,41 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+body {
+    font-size: 80%;
+    font-family: 'Raleway', sans-serif;
+    background-color: yellowgreen;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+a:hover {
+    color: white;
+}
+
+/*x-ms-webview canvas set style form multiple elements using a coma separator*/
+h1, h2 {
+    background-color: yellow;
+}
+
+div {
+    background-color: red;
+}
+
+/*the content here will get aqua color-profile because datalist the last rule apllied*/
+/*you canvas think that paragraph as having overriden the background guven by the div*/
+p {
+    background-color: aqua;
+}
+
+/*just the identified element by its id*/
+#content {
+    background-color: green;
+}
+/*classes can be used anywhere*/
+.quotation {
+    background-color: blueviolet;
+}

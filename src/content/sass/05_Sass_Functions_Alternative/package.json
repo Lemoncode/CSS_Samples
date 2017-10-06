@@ -1,0 +1,24 @@
+{
+  "name": "demos_playground",
+  "version": "1.0.0",
+  "description": "Just a place for demos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "sass": "gulp sass"
+  },
+  "keywords": [
+    "CSS",
+    "JavaScript",
+    "Demos"
+  ],
+  "author": "Jaime Salas",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-open": "^2.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

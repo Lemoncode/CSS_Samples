@@ -1,0 +1,32 @@
+body {
+    background-color: #1f1f1f;
+    color: #bfbfbf;
+    height: 2000px;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+em {
+    color: yellowgreen;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.blue-box {
+    background: lightblue;
+    /*Our blue box has moved exactly 150 pixels from its original position (top)*/
+    position: fixed;
+    /*top: 150px;*/
+    /*left: 150px;*/
+    bottom: 0px;
+}
+
+.green-box {
+    background: lightgreen;
+}

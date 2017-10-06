@@ -1,0 +1,18 @@
+footer {
+    position:fixed; 
+    bottom:0; 
+    width:100%;
+}
+
+.column-decorator {
+    box-sizing: border-box;
+    border: 0.3em solid black;
+}
+
+.column-decorator:nth-of-type(2n){
+    background-color: #00bcd4;
+}
+
+.column-decorator:nth-of-type(2n + 1){
+    background-color: #d81b60;
+}

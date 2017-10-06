@@ -1,0 +1,10 @@
+.footer {
+  padding-top:5px;
+  padding-bottom:5px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.nav-style {
+  padding-top:5px;
+}

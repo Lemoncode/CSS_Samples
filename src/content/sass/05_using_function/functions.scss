@@ -1,0 +1,88 @@
+// http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
+// http://hugogiraudel.com/2013/10/09/advanced-sass-list-functions-again/
+// https://www.sitepoint.com/understanding-sass-units/
+// http://stackoverflow.com/questions/2348597/why-doesnt-this-javascript-rgb-to-hsl-code-work/2348659#2348659
+// http://stackoverflow.com/questions/29037023/how-to-calculate-required-hue-rotate-to-generate-specific-colour
+// https://www.sitepoint.com/using-sass-error-warn-and-debug-directives/
+$baseColorHue: 38;
+$baseColorSaturation: 24.5;
+$baseColorBrightnes: 60;
+
+@function calculateRotation($r, $g, $b) {
+    $h: nth(rgb-to-hsl($r, $g, $b), 1);
+    // @debug $h;
+    @return 0deg + $h - $baseColorHue; // Casting
+}
+
+@function calculateSaturationFilter($r, $g, $b) {
+    $s: nth(rgb-to-hsl($r, $g, $b), 2);
+    // @debug $s;
+    // Built in function -> percentage
+    @return percentage((500 + ($baseColorSaturation - $s)) / 100); // Saturate extra to notice effects.
+}
+
+@function calculateBrightness($r, $g, $b) {
+    $l: nth(rgb-to-hsl($r, $g, $b), 3);
+    // @debug $l;
+    @return percentage((100 + ($l - $baseColorBrightnes)) / 100);
+}
+
+@function rgb-to-hsl($r, $g, $b){
+    $r: $r / 255;
+    $g: $g / 255;
+    $b: $b / 255;
+
+    $maxValue: max($r, $g, $b);
+    $minValue: min($r, $g, $b);
+    $l: ($maxValue + $minValue) / 2;
+    $h: ();
+    $s: ();
+
+    @if ($maxValue == $minValue) {
+        $h: 0;
+        $s: 0;
+    }
+    @else {
+        $s: calculateSaturation($l, $maxValue, $minValue);
+        $h: calculateHue($r, $g, $b);
+    }
+    
+    $hsl: floor($h * 360), floor($s * 100), floor($l * 100);
+    @return $hsl;
+}
+
+@function calculateSaturation($l, $maxValue, $minValue) {
+    $delta: $maxValue - $minValue;
+    $saturation: ();
+    @if ($l > 0.5) {
+        $saturation: $delta / (2 - $maxValue - $minValue);
+    }
+    @else {
+        $saturation: $delta / ($maxValue + $minValue);
+    }
+
+    @return $saturation;
+}
+
+@function calculateHue($r, $g, $b) {
+    $hue: ();
+    $maxValueHue: max($r, $g, $b);
+    $minValueHue: min($r, $g, $b);
+
+    @if($maxValueHue == $r) {
+        $hue: ($g -$b) / ($maxValueHue - $minValueHue) + hueFactor($g, $b);
+    } @else if($maxValueHue == $g) {
+        $hue: ($b -$r) / ($maxValueHue - $minValueHue) + 2;
+    } @else if($maxValueHue == $b) {
+        $hue: ($r -$g) / ($maxValueHue - $minValueHue) + 4
+    }
+    @return $hue / 6;
+}
+
+@function hueFactor($g, $b) {
+    @if($g < $b) {
+        @return 6;
+    } @else {
+        @return 0;
+    }
+}

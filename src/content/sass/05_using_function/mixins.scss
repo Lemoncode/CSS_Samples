@@ -1,0 +1,40 @@
+@import "colors.scss";
+@import "functions.scss";
+
+@mixin rounded-corners-all($size:5px){
+    border-radius: $size;
+    -moz-border-radius: $size; // Deprecated
+    -webkit-border-radius: $size // Deprecated
+}
+
+@mixin header-footer-box-initialization() {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    min-height: 70px;
+    background-color: darkgrey; // Move to colors
+    border-top: 5px solid $lemoncodeColor;
+}
+
+@mixin content-sections-initialization() {
+    width: 480px;
+    @include justify-content;
+    border: $mainColor 2px solid;
+    padding: 5px;
+}
+
+@mixin justify-content() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin set-footer-position() {
+    position: fixed; 
+    left: 0px;
+    bottom: 0px;
+}
+
+@mixin image-transparent-cover() {
+    -webkit-filter: brightness(50%) sepia(1)  hue-rotate(calculateRotation(104, 238, 148)) saturate(calculateSaturationFilter(104, 238, 148)) brightness(calculateBrightness(104, 238, 148));
+    filter: brightness(50%) sepia(1)  hue-rotate(calculateRotation(104, 238, 148)) saturate(calculateSaturationFilter(104, 238, 148)) brightness(calculateBrightness(104, 238, 148));
+}

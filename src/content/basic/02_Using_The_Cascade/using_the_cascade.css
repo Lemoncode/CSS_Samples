@@ -1,0 +1,35 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+body {
+    /*font-size: 80%;*/
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 0.5em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+p {
+    background-color: green;
+}
+
+p {
+    background-color: grey;
+}
+
+
+/*
+    The winner is grey. Because the browser sees these conflicting rules that come
+    from the same source it just uses the last rule that it sees that would apply
+    to that element. The order of rules is significant and this also counts when
+    you are using multiple stylesheets.
+*/

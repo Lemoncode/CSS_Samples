@@ -1,0 +1,12 @@
+@mixin calculate-columns($numberOfColumns: 1) {
+
+    @for $colNumber from 1 through $numberOfColumns {
+        .col-#{$colNumber} {
+            width: 100% * ($colNumber / $numberOfColumns);
+            float: left;
+            box-sizing: border-box;
+            border: 0.3em solid black;
+        }
+    }
+
+}

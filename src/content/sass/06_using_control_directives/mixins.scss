@@ -1,0 +1,46 @@
+@mixin nav-off ($baseFontSize, $color:white, $hoverColor:yellowgreen) {
+  nav {
+    color: white;
+    float: right;
+    padding: 1em;
+    font: {
+      size: $baseFontSize * 0.5;
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+
+        a {
+          color: $color;
+
+          &:hover {
+            color: $hoverColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin off-section ($offSectionColor, $percentage:35%) {
+  min-height: 5em;
+  width: 100%;
+  background-color: lighten($offSectionColor, $percentage);
+  margin: 0;
+}
+
+@mixin calculate-columns($numberOfColumns: 1) {
+
+  @for $colNumber from 1 through $numberOfColumns {
+    .col-#{$colNumber} {
+      width: 100% * ($colNumber / $numberOfColumns);
+      float: left;
+      box-sizing: border-box;
+      border: 0.3em solid black;
+    }
+  }
+
+}

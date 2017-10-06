@@ -1,0 +1,42 @@
+body {
+    background-color: #1f1f1f;
+    color: #bfbfbf;
+    height: 1000px;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+em {
+    color: yellowgreen;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.blue-box {
+    background: lightblue;
+    /*position: relative;*/
+    /*position: relative;*/
+    position: inherit;
+    top: 0px;
+    z-index: 5;
+}
+
+.green-box {
+    background: lightgreen;
+    position: relative;
+    /*top: -150px;*/
+    z-index: 1;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.4);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}

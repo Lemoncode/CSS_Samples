@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: #ccff99;
+}
+
+.copyright {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.code {
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+/*The browser will ignore the font that does not exist, and move to the next one*/
+h1 {
+    font-family: fontdoesnotexist, 'Times New Roman', serif;
+    font-size: 1.2em;
+    /*letter-spacing: 2em;*/
+    /*word-spacing: 2em;*/
+    /*text-decoration: underline line-through;*/
+    text-align: center;
+}
+
+ol {
+    /*font: italic 0.9em serif;*/
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.content {
+    background: #eeeecc;
+    padding: 7px;
+    line-height: 1.2em; /*Space between text lines*/
+    /*text-indent: 3em;*/
+    text-align: justify; /*Makes the content to be the closest as posible to the margin*/
+}

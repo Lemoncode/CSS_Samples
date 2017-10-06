@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./assets/css/site.css">
+</head>
+<body>
+  <!-- Add nav bar to this example -->
+  <header class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>my App <small>gestor de infracciones<small></h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <!-- Body -->
+    <div class="row">
+      <!-- SearchPanel -->
+      <div class="col-md-4 well">
+        <span class="glyphicon glyphicon-search"></span>&nbsp;Buscar Infracción
+        <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+        <div class="row">
+          <form role="form">
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="entryDate">Fecha registro:</label>
+                <input type="text" class="form-control" id="entryDate"/>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="status">Estado:</label>
+                <input type="select" class="form-control" id="status"/>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="nstudy">Num. Infracción:</label>
+                <input type="text" class="form-control" id="nstudy"/>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-md-6">
+              <div class="form-group">
+                <label for="extref">Referencia Externa:</label>
+                <input type="text" class="form-control" id="extref"/>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-12">
+              <div class="form-group">
+                <label for="center">Municipio:</label>
+                <input type="text" class="form-control" id="center"/>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-12">
+              <div class="form-group">
+                <label for="services">Provincia:</label>
+                <input type="text" class="form-control" id="services"/>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-12">
+              <div class="form-group">
+                <label for="doctor">Agente:</label>
+                <input type="text" class="form-control" id="doctor"/>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary pull-right">Buscar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- #SearchPanel -->
+
+      <div class="col-md-8">
+         <!-- http://getbootstrap.com/javascript/#tabs -->
+         <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#closedstudies" role="tab" data-toggle="tab">Infracciones cerradas</a></li>
+            <li><a href="#pendingstudies" role="tab" data-toggle="tab">Infracciones abiertas</a></li>
+         </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="closedstudies">
+            <table class="table table-hover">
+              <tr>
+                <th>Ciudadano</th>
+                <th>Tipo</th>
+                <th>F. Cierre</th>
+              </tr>
+
+              <tr>
+                <td>Perez Gomez, Juan</td>
+                <td>APARCAMIENTO</td>
+                <td>12/06/2014</td>
+              </tr>
+
+              <tr>
+                <td>Guzman Alegria, Jose Manuel</td>
+                <td>SARE</td>
+                <td>12/06/2014</td>
+              </tr>
+
+              <tr>
+                <td>Muñoz Salas, Teresa</td>
+                <td>VELOCIDAD</td>
+                <td>10/06/2014</td>
+              </tr>
+
+              <tr>
+                <td>España González, Juan</td>
+                <td>VELOCIDAD</td>
+                <td>10/06/2014</td>
+              </tr>
+
+              <tr>
+                <td>Nuñez Navarro, Miguel</td>
+                <td>VELOCIDAD</td>
+                <td>12/06/2014</td>
+              </tr>
+
+              <tr>
+                <td>Navas Iniesta, Lionel</td>
+                <td>APARCAMIENTO</td>
+                <td>12/06/2014</td>
+              </tr>
+
+              <tr>
+                <td>Rumbado Tejón, Maria</td>
+                <td>APARCAMIENTO</td>
+                <td>10/06/2014</td>
+              </tr>
+
+              <tr>
+                <td>Keylor Torres, David</td>
+                <td>APARCAMIENTO</td>
+                <td>10/06/2014</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="tab-pane" id="pendingstudies">Pending</div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- #Body -->
+
+  </div>
+
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 bg-primary footer">
+        <img src="assets/images/logo.png"/>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor, diam ultrices condimentum eleifend, urna ligula consectetur elit, non consequat est quam in est.</span>
+      <div>
+    </div>
+  </footer>
+</body>
+</html>

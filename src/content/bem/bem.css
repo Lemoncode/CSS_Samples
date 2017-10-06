@@ -1,0 +1,72 @@
+/*
+<body>
+  <!-- no-bem html -->
+  <h2>No BEM HTML</h2>
+
+  <div class="content content-albumList"> Block // Crear mixin
+    <ul class="albumList"> Block // albumList
+      <li>Item 1</li> Element // albumList-item
+      <li>Item 2</li> Element // albumList-item
+      <li class="fav">Item 3</li> Element // albumList-item--fav
+      <li>Item 4</li>
+    </ul>
+    <br/>
+    <span class="fav"> // Block //detail detail--fav
+      Incluir en mis favoritos.
+    </span>
+  </div>
+</body>
+*/
+
+
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import 'http://fonts.googleapis.com/css?family=Share:400,700';
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700s';
+
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+/*Block*/
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: rgba(120, 120, 120, 0.3);
+}
+
+/*Block*/
+.albumList {
+  list-style-type: none;
+}
+
+/*Mixin*/
+.content-albumList {
+  text-align: center;
+  padding: 20px;
+}
+
+/*Element*/
+.albumList-item {
+  font-size: 10pt;
+}
+
+/*Modifier*/
+.albumList-item--fav {
+  font-weight: 600;
+  color: magenta;
+  font-size: 12 pt;
+}
+
+/*Block*/
+.detail {
+  font-size: 14pt;
+  color: darkblue;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+/*Mixin*/
+.content-detail {
+  display: block;
+  text-align: left;
+}

@@ -1,0 +1,61 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+  /*flex-wrap: nowrap;*/
+  /*flex-direction: row-reverse;*/
+  /*display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;*/
+  /*justify-content: space-between;*/
+  /*align-items: baseline;*/
+  align-items: center;
+  height: 500px;
+}
+
+.item {
+  height: 250px;
+  width: 100px;
+  /*flex-grow: 1;*/
+  color: white;
+  padding-top: 50px;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.item.color-red {
+  background-color: red;
+}
+
+.item.color-blue {
+  background-color: blue;
+}
+
+.item.color-green {
+  background-color: green;
+  /*height: 100px;
+  align-self: center;*/
+  /*order: -1;*/
+}
+
+.item.color-brown {
+  background-color: brown;
+}
+
+.item.color-purple {
+  background-color: purple;
+}
+
+.item.color-cyan {
+  background-color: cyan;
+}
+
+.item.color-orange {
+  background-color: orange;
+}

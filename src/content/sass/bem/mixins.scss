@@ -1,0 +1,25 @@
+@mixin block($block) {
+  #{$block} {
+    @content;
+  }
+}
+
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Playing with @at-root
+// Does not control real inheritence
+// @mixin extendBlock($block, $modifier) {
+//   #{$block}--#{$modifier} {
+//     @content;
+//   }
+// }

@@ -1,0 +1,31 @@
+@import "functions.scss"; 
+
+$basSize: 14px;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-size: 2 * $basSize;  
+}
+
+@mixin image-transparent-cover() {
+    -webkit-filter: brightness(50%) sepia(1)  hue-rotate(calculateRotation(104, 238, 148)) saturate(calculateSaturationFilter(104, 238, 148)) brightness(calculateBrightness(104, 238, 148));
+    filter: brightness(50%) sepia(1)  hue-rotate(calculateRotation(104, 238, 148)) saturate(calculateSaturationFilter(104, 238, 148)) brightness(calculateBrightness(104, 238, 148));
+}
+
+.picture-container {
+    width: 90%;
+    margin: 0 auto;
+
+    picture {
+        img {
+            max-width: 100%;
+        }
+
+        &:hover {
+            @include image-transparent-cover;
+        } 
+    }
+}

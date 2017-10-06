@@ -1,0 +1,8 @@
+@function calculatePalate($numberSteps, $baseColor:#ff0000) {
+  $palate:(); //
+  @for $step from 1 through $numberSteps {
+    $percentage: 0% + (($step / $numberSteps) * 100);
+    $palate: append($palate, lighten($baseColor, $percentage), 'comma');
+  }
+  @return $palate;
+}

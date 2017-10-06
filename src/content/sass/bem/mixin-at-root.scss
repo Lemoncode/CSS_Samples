@@ -1,0 +1,42 @@
+// Reference:https://github.com/sass/sass/issues/440
+// Reference:https://webdesign.tutsplus.com/articles/understanding-variable-scope-in-sass--cms-23498
+$extend: false;
+$blockExtended: "";
+
+@mixin at-root-block($name) {
+
+  @at-root .#{$name} { // Avoid pass the point on name.
+    @content;
+  }
+}
+
+@mixin at-root-modifier($name) {
+
+  @at-root #{&}--#{$name}{
+    @content;
+  }
+}
+
+@mixin at-root-element($name) {
+
+  @if $extend  {
+    @at-root #{&} .#{$blockExtended}--#{$name} {
+      @content;
+    }
+  } @else {
+    @at-root #{&}--#{$name} {
+      @content;
+    }
+  }
+}
+
+@mixin at-root-extendBlock($blockExtended, $name){
+  $extend: true !global;
+  $blockExtended: $blockExtended !global;
+
+  @at-root .#{$blockExtended}--#{$name} {
+    @content;
+  }
+
+  $extend: false !global; // Reset variable
+}

@@ -1,0 +1,33 @@
+@import "colors";
+
+@mixin header-footer-box-initialization() {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    min-height: 70px;
+    background-color: darkgrey; // Move to colors
+    border-top: 5px solid $lemoncodeColor;
+}
+
+@mixin content-sections-initialization() {
+    width: 480px;
+    @include justify-content;
+    border: $mainColor 2px solid;
+    padding: 5px;
+}
+
+@mixin justify-content() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin set-footer-position() {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+
+@mixin image-transparent-cover($brightness: 50%) {
+    -webkit-filter: brightness($brightness) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
+    filter: brightness($brightness) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
+}

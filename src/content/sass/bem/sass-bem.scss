@@ -1,0 +1,62 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import 'http://fonts.googleapis.com/css?family=Share:400,700';
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700s';
+@import "mixins.scss";
+@import "mixin-at-root.scss";
+
+html {
+    font-family: 'Raleway', sans-serif;
+}
+// Using mixins
+// @include block('.album'){
+//   list-style-type: none;
+//   @include element('record'){
+//     font-size: 15pt;
+//     @include modifier('bad'){
+//       font-weight: 600;
+//       color: magenta;
+//       font-size: 12pt;
+//     }
+//   }
+// };
+
+// Using mixins with inheritance
+// @include at-root-extendBlock('album', 'horizontal'){
+//   display: inline-block;
+//   @include at-root-element('record') {
+//     font-size: 15pt;
+//   }
+// };
+
+/*block*/
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: rgba(120, 120, 120, 0.3);
+}
+
+.albumList { // block
+  list-style-type: none;
+
+  @at-root #{&}-item { // element
+    font-size: 10pt;
+
+    @at-root #{&}--fav { // modifier
+      font-weight: 600;
+      color: magenta;
+      font-size: 12pt;
+    }
+  }
+}
+
+// TODO: Discuss on class what to do with this element.
+.fav {
+  font-size: 14pt;
+  color: darkblue;
+  text-decoration: underline;
+}
+
+br {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

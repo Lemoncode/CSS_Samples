@@ -5,16 +5,18 @@ body {
 
 .nav-root li {
     width: 6rem;
+    color: white;
 }
 
 .nav-root a {
     text-decoration: none;
-    color: white;
     font-size:  1.3rem;
     font-weight: 400;
-    color: #00a9d9;
+    color: #00eed9;
 }
 
 .nav-root ul {
-    
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }

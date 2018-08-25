@@ -1,6 +1,6 @@
 ## Flexbox Demos
 
-### 02 Playing with Flex (conatiner), grow and order. 
+### 02 Playing with Flex (container), grow and order. 
 
 ### Steps
 

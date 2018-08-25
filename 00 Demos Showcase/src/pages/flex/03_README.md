@@ -80,7 +80,7 @@ div.flex-container {
     margin: 0;
     padding: 0;
     display: flex;
-+    flex-direction: column;
++   flex-direction: column;
 }
 ```
 * By default it's row.

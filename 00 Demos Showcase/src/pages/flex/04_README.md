@@ -264,7 +264,7 @@ div.flex-container {
 
 * The content is to be the baseline, so when we apply this property with this value, all the items has the same baseline, that way it's align vertically. If we change the font-size of one of the flex-items, we can watch how this change.
 
-### 6. The final property to experiment is alig-self.
+### 6. The final property to experiment is align-self.
 
 * This property allows us to override align-items, so if you want to control a specific item it'll allow us to do that and change it.
 

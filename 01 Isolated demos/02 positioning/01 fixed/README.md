@@ -53,7 +53,7 @@ body {
 
 ### 3. Move blue box from top.
 
-#### Note that the green box disapears, or that loks like. Too figure out waht is going on here, we have 4 chances to move the blue box on 4 differen directions: top, bottom, right, left. It's very important to know that we can move the box, because we have applied position to box.
+#### Note that the green box disapears, or that looks like. Too figure out waht is going on here, we have 4 chances to move the blue box on 4 different directions: top, bottom, right, left. It's very important to know that we can move the box, because we have applied position to box.
 
 
 ```diff
@@ -63,7 +63,7 @@ body {
 +    top: 150px;
 }
 ```  
-#### Once we have applied this positioning the blue bo moves 150px on 'y' axis. The other elements are completly ignoring this box, so when we apply this the other elements ignore the width and height of this box (that is because green box it's on its place). If we remove the 150px on top, what happens, is that the blue box it's over the green box
+#### Once we have applied this positioning the blue box moves 150px on 'y' axis. The other elements are completly ignoring this box, so when we apply this the other elements ignore the width and height of this box (that is because green box it's on its place). If we remove the 150px on top, what happens, is that the blue box it's over the green box
 
 ### 4. Remove top value.
 
@@ -75,7 +75,7 @@ body {
 }
 ```  
 
-#### If we remove the 150px on top, what happens, is that the blue box it's over the green box, so we can't see the green box. But when we move the blue box, the green box appears agian.
+#### If we remove the 150px on top, what happens, is that the blue box it's over the green box, so we can't see the green box. But when we move the blue box, the green box appears again.
 
 ### 5. Apply two contradictory movements. 
 

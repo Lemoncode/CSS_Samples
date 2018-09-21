@@ -17,10 +17,12 @@ menu, nav, section, summary, time, mark, audio, video {
     background: transparent; 
 }
 
+$baseSize: 14px;
+
 /* Basics */
 html {
     font-family: 'Raleway', sans-serif;
-    font-size: 14px; 
+    font-size: $baseSize; 
 }
 
 body {
@@ -28,15 +30,15 @@ body {
 }
 
 h1 {
-    font-size: 24px; 
+    font-size: $baseSize + 10px; 
 }
 
 h2 {
-    font-size: 18px;
+    font-size: $baseSize + 4px;
 }
 
 h3 {
-    font-size: 16px; 
+    font-size: $baseSize + 2px; 
 }
 
 /* Layout */
@@ -91,7 +93,7 @@ nav ul a:hover {
 }
 
 footer {
-    font-size: 9px;
+    font-size: $baseSize - 5px;
     text-align: center;
     color: white;
     

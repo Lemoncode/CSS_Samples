@@ -2,41 +2,31 @@
 @import 'http://fonts.googleapis.com/css?family=Share:400,700';
 @import 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700s';
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup,
-menu, nav, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent; 
-}
+@import "init";
+@import "colors.scss";
+
+$baseSize: 14px;
 
 /* Basics */
 html {
     font-family: 'Raleway', sans-serif;
-    font-size: 14px; 
+    font-size: $baseSize; 
 }
 
 body {
-    background: black; 
+    background: $mainColor; 
 }
 
 h1 {
-    font-size: 24px; 
+    font-size: $baseSize + 10px; 
 }
 
 h2 {
-    font-size: 18px;
+    font-size: $baseSize + 4px;
 }
 
 h3 {
-    font-size: 16px; 
+    font-size: $baseSize + 2px; 
 }
 
 /* Layout */
@@ -47,53 +37,128 @@ h3 {
     margin-right: auto;
     background: #FFF;
     padding: 25px;
-    color: black; 
+    color: $mainColor; 
 }
 
 /* Sections */
 header {
-    border-bottom: 5px solid greenyellow;
+    border-bottom: 5px solid $lemoncodeColor;
     background-color: darkgrey;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 30px;
     min-height: 70px;
-}
 
-header h1 {
-    font-size: 24px;
-    font-family: 'Share', cursive;
-    color: yellowgreen; 
-}
+    h1 {
+        font-size: 24px;
+        font-family: 'Share', cursive;
+        color: yellowgreen; 
+    }
+} 
 
 nav {
     font-size: 14px;
     font-weight: bold;
     float: right; 
-    color: white;
-}
-nav ul {
-    list-style-type: none;
-}
-nav ul li {
-    float: left;
-    margin: 2px;
+    color: $offColor;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            float: left;
+            margin: 2px;
+        }
+
+        a {
+            text-decoration: none; 
+            color: $offColor;
+
+            &:hover {
+                text-decoration: underline;
+                color: $lemoncodeColor; 
+            }
+        }
+    }
 }
 
-nav ul a {
-    text-decoration: none; 
-    color: white;
+
+/* Forms */
+.contact-form {
+    background: #f8f8f8;
+    width: 480px;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    border: $mainColor 2px solid;
+    padding: 5px;
+
+    input[type=text], textarea {
+        font-family: "Open Sans", Verdana, Helvetica, sans-serif;
+        font-size: 18px;
+        background: #e6e6e6;
+        width: 350px;
+        border: 1px $mainColor solid;
+        float: right;
+    }
+
+    textarea {
+        height: 100px;
+        font-family: "Open Sans", Verdana, Helvetica, sans-serif;
+        resize: none;
+    }
+
+    label {
+        width: 150px; 
+    }
+
+    input[type=submit] {
+        float: right;
+        border: 2px solid yellowgreen; 
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        color: $offColor;
+        background-color: black;
+    }
 }
 
-nav ul a:hover {
-    text-decoration: underline;
-    color: yellowgreen; 
+.form-statement {
+    padding: 20px;
+    display: block;
+}
+
+.form-submit {
+    display: block;
+    margin-top: 100px;
+}
+
+.about {
+    background-color: $offColor;
+    width: 480px;
+    height: 275px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border: $mainColor 2px solid;
+    padding: 5px;
+
+    img {
+        max-width: 50%;
+        max-height: 50%;
+        padding: 5px;
+
+        &:hover {
+            -webkit-filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
+            filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);        
+        }
+    }
 }
 
 footer {
-    font-size: 9px;
+    font-size: $baseSize - 5px;
     text-align: center;
-    color: white;
+    color: $offColor;
     
     position: fixed; 
     left: 0px;
@@ -105,83 +170,11 @@ footer {
     padding-top: 30px;
     min-height: 70px;
 
-    border-top: 5px solid greenyellow;
+    border-top: 5px solid $lemoncodeColor;
     background-color: darkgrey;
-}
 
-
-/* Forms */
-.contact-form {
-    background: #f8f8f8;
-    width: 480px;
-    height: 380px;
-    margin-left: auto;
-    margin-right: auto;
-    border: black 2px solid;
-    padding: 5px;
-}
-
-.contact-form input[type=text], .contact-form textarea {
-    font-family: "Open Sans", Verdana, Helvetica, sans-serif;
-    font-size: 18px;
-    background: #e6e6e6;
-    width: 350px;
-    border: 1px #000 solid;
-    float: right;
-}
-
-.form-statement {
-    padding: 20px;
-    display: block;
-}
-
-.contact-form textarea {
-    height: 100px;
-    font-family: "Open Sans", Verdana, Helvetica, sans-serif;
-    resize: none;
-}
-.contact-form label {
-    width: 150px; 
-}
-
-.contact-form input[type=submit] {
-    float: right;
-    border: 2px solid yellowgreen; 
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    color: white;
-    background-color: black;
-}
-
-.form-submit {
-    display: block;
-    margin-top: 100px;
-}
-
-.about {
-    background-color: white;
-    width: 480px;
-    height: 275px;
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    border: black 2px solid;
-    padding: 5px;
-}
-
-.about img {
-    max-width: 50%;
-    max-height: 50%;
-    padding: 5px;
-}
-
-.about img:hover {
-    -webkit-filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
-    filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
-}
-
-footer p:after {
-    margin-left: 5px;
-    content: '\00A9';
-}
+    p:after {
+        margin-left: 5px;
+        content: '\00A9';
+    }
+} 

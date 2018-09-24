@@ -13,6 +13,6 @@
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-open": "^2.0.0",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "3.0.0"
   }
 }

@@ -36,4 +36,19 @@ npm install
 npm start
 ```
 
+## Build sass files
+
+If we only need to build all `sass` files, we have to execute:
+
+```bash
+cd 00 Demos Showcase
+```
+
+```bash
+npm install
+``` 
+
+```bash
+npm run build
+```
 

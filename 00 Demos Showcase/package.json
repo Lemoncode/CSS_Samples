@@ -4,7 +4,8 @@
   "description": "Current demos for Lemoncode Master 16/17",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp sass"
   },
   "author": "Jaime Salas",
   "license": "ISC",

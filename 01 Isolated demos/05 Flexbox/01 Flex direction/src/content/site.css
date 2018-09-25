@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif
+}
+
+div.flex-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-container div {
+    height: 150px;
+    padding-top: 45px;
+    color: white;
+    font-weight: bold;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+.flex-container div:first-child {
+    background-color: red;
+}
+
+.flex-container div:nth-child(2) {
+    background-color: yellow;
+}
+
+.flex-container div:nth-child(3) {
+    background-color: blue;
+}
+
+.flex-container div:nth-child(4) {
+    background-color: brown;
+}
+
+.flex-container div:nth-child(5) {
+    background-color: green;
+}
+.flex-container div:last-child {
+    background-color: pink;
+}

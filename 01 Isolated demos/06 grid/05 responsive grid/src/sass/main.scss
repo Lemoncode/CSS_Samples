@@ -1,0 +1,54 @@
+@import "reset.scss";
+@import "layout.scss";
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main-display {
+    flex-grow: 1;
+}
+
+.header {
+    grid-area: header;
+    background-color: pink;
+}
+
+.articles {
+    grid-area: articles;
+    background-color: green;
+}
+
+.regular {
+    grid-area: regular;
+    background-color: blue;
+}
+
+.info {
+    grid-area: info;
+    background-color: cyan;
+} 
+
+.footer {
+    grid-area: footer;
+    background-color: yellow;
+}
+
+@media screen and (min-width: 75rem) {
+    .main-content {
+        @include full-resolution;
+    }
+}
+
+@media screen and (max-width: 74.9rem) and (min-width: 48rem) {
+    .main-content {
+        @include medium-resolution;
+    }
+}
+
+@media screen and (max-width: 47.9rem) {
+    @include small-resolution;
+}

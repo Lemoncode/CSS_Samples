@@ -1,310 +1,78 @@
 # Module 1 - Layout
 
-# SASS Variables and Functions
+# SASS Using control directives
 
 ## Steps:
 
-### 1. Create a basic HTML. This HTML is the same for the first six demos.
+### 1. Create a basic HTML.
 
 ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic grid</title>
+    <link rel="StyleSheet" href="./content/compile_css/main.css" type="text/css" />
+</head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href='/'>Home</a></li>
-                <li>|</li>
-                <li><a href='http://www.formacion.lemoncode.net/lemoncode-blog'>Lemoncode Blog</a></li>
-            </ul>
-        </nav>
-        <h1>
-            Start Page
-        </h1>
-    </header>
-    <section class="container">
-        <div class="contact-form">
-            <h1>
-                Contacto
-            </h1>
-            <form method="POST" action="/">
-                
-                <div class="form-statement">
-                    <label for="name">
-                        NOMBRE
-                    </label>
-                    <input type="text" id="name" />
-                </div>
-
-                <div class="form-statement">
-                    <label for="email">
-                        EMAIL
-                    </label>
-                    <input type="text" id="email" />
-                </div>
-                
-                <div class="form-statement">
-                    <label for="subject">
-                        TEMA
-                    </label>
-                    <input type="text" id="subject" />
-                </div>
-                
-                <div class="form-statement">
-                    <label for="message">
-                        MENSAJE
-                    </label>
-                    <textarea id="message" rows="5" cols="100"></textarea>
-                </div>
-                
-                <div class="form-submit">
-                    <input type="submit" value="ENVIAR" />
-                </div>
-            </form>
-        </div>
-        <div class="about">
-            <h2>Acerca de nostros</h2>
-            <img src="./content/images/braulio-diez.png"/>
-            <img src="./content/images/jaime-salas.jpg"/>
-            <p>Mira tu un par de limones...</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>Lemoncode</p>
-        <nav>
-            <ul>
-                <li><a href='/'>Home</a></li>
-                <li>|</li>
-                <li><a href='http://sass-lang.com/'>Stay sassy</a></li>
-            </ul>
-        </nav>
-    </footer>
+    <div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-2"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+    </div>
 </body>
+</html>
 ``` 
 
-### 2. This is the start point for styles.
-```css
-@import 'https://fonts.googleapis.com/css?family=Raleway';
-@import 'http://fonts.googleapis.com/css?family=Share:400,700';
-@import 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700s';
-
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup,
-menu, nav, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent; 
-}
-
-/* Basics */
-html {
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px; 
-}
-
-body {
-    background: black; 
-}
-
-h1 {
-    font-size: 24px; 
-}
-
-h2 {
-    font-size: 18px;
-}
-
-h3 {
-    font-size: 16px; 
-}
-
-/* Layout */
-.container {
-    width: 1200px;
-    height: inherit;
-    margin-left: auto;
-    margin-right: auto;
-    background: #FFF;
-    padding: 25px;
-    color: black; 
-}
-
-/* Sections */
-header {
-    border-bottom: 5px solid greenyellow;
-    background-color: darkgrey;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 30px;
-    min-height: 70px;
-}
-
-header h1 {
-    font-size: 24px;
-    font-family: 'Share', cursive;
-    color: yellowgreen; 
-}
-
-nav {
-    font-size: 14px;
-    font-weight: bold;
-    float: right; 
-    color: white;
-}
-nav ul {
-    list-style-type: none;
-}
-nav ul li {
-    float: left;
-    margin: 2px;
-}
-
-nav ul a {
-    text-decoration: none; 
-    color: white;
-}
-
-nav ul a:hover {
-    text-decoration: underline;
-    color: yellowgreen; 
-}
-
-footer {
-    font-size: 9px;
-    text-align: center;
-    color: white;
-    
-    position: fixed; 
-    left: 0px;
-    bottom: 0px;
-    width: 97%;
-
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 30px;
-    min-height: 70px;
-
-    border-top: 5px solid greenyellow;
-    background-color: darkgrey;
-}
+### 2. Our goal is create a dynamic grid system, where we can define dynamically the number of columns, not being tied a rigid number of columns as bootstrap system where we are tied to 12.
 
 
-/* Forms */
-.contact-form {
-    background: #f8f8f8;
-    width: 480px;
-    height: 380px;
-    margin-left: auto;
-    margin-right: auto;
-    border: black 2px solid;
-    padding: 5px;
-}
-
-.contact-form input[type=text], .contact-form textarea {
-    font-family: "Open Sans", Verdana, Helvetica, sans-serif;
-    font-size: 18px;
-    background: #e6e6e6;
-    width: 350px;
-    border: 1px #000 solid;
-    float: right;
-}
-
-.form-statement {
-    padding: 20px;
-    display: block;
-}
-
-.contact-form textarea {
-    height: 100px;
-    font-family: "Open Sans", Verdana, Helvetica, sans-serif;
-    resize: none;
-}
-.contact-form label {
-    width: 150px; 
-}
-
-.contact-form input[type=submit] {
-    float: right;
-    border: 2px solid yellowgreen; 
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    color: white;
-    background-color: black;
-}
-
-.form-submit {
-    display: block;
-    margin-top: 100px;
-}
-
-.about {
-    background-color: white;
-    width: 480px;
-    height: 275px;
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    border: black 2px solid;
-    padding: 5px;
-}
-
-.about img {
-    max-width: 50%;
-    max-height: 50%;
-    padding: 5px;
-}
-
-.about img:hover {
-    -webkit-filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
-    filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
-}
-
-footer p:after {
-    margin-left: 5px;
-    content: '\00A9';
+```scss _mixins.scss
+@mixin calculate-columns($numberOfColoumns: 1) {
+    @for $colNumber from 1 through $numberOfColoumns {
+        .col-#{$colNumber} {
+            width: 100% * ($colNumber / $numberOfColoumns);
+            float: left;
+            box-sizing: border-box;
+            border: 0.3em solid black;
+        }
+    }
 }
 ```
+* This will generate a columns between one and the total number feed it to the `calculate-columns` function.
 
-* If we start the application we must see our sass file compiled, and styles applied to index.html.
+### 3. Now that we can use it in `main.scss`
 
-### 3. Let's start by declaring a variable for the base size of font of 14px value and apply on different places
+```scss main.scss
+@import "mixins.scss";
 
-* The objetive is to calculate this size from this variable base size.
+.container {
+    padding-left: 1em;
+    padding-right: 1em;
 
-```diff
-+$baseSize: 14px;
-....
-h1 {
--    font-size: 24px; 
-+    font-size: $baseSize + 10px; 
+    div:nth-of-type(2n + 1) {
+        background-color: lighten(yellow, 25%);
+    }
+
+    div:nth-of-type(2n) {
+        background-color: lighten(cyan, 25%);
+    }
 }
 
-h2 {
--    font-size: 18px;
-+    font-size: $baseSize + 4px;
+[class^='col-'] {
+    height: 12em;
 }
 
-h3 {
--    font-size: 16px; 
-+    font-size: $baseSize + 2px;
+@media (min-width: 250px) {
+    @include calculate-columns(1);
 }
 
-nav {
--    font-size: 14px;
-+    font-size: $baseSize;
-     ...
+@media (min-width: 500px) {
+    @include calculate-columns(2);
 }
 
-footer {
--    font-size: 9px;
-+    font-size: $baseSize - 5px;
-    ...
+@media (min-width: 1200px) {
+    @include calculate-columns(6);
 }
 ```

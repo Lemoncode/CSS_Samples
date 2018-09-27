@@ -83,11 +83,6 @@ $baseColorBrightnes: 60;
 
 
 @function hueFactor($g, $b) {
-    // @if($g < $b) {
-    //     @return 6;
-    // } @else {
-    //     @return 0;
-    // }
     $gLowerThanb: $g < $b; 
     @return if($gLowerThanb, 6, 0); // [1]
 }
@@ -98,3 +93,5 @@ $baseColorBrightnes: 60;
 // [4] We can create collections in SASS, the way separaitin by comas. The floor function is from SASS as well
 // [5] The collections in SASS are one based index. nth function provides a way to select one item from the collection
 // [6] percentage belongs to sass.
+// [7] There is no a explicit way to perform casting. The way is using a type unit in this case we are using 0deg, to achieve this.
+ 

@@ -1,3 +1,6 @@
+@import "colors.scss";
+@import "functions.scss";
+
 @mixin rounded-corners-all($size: 5px) {
     border-radius: $size;
 }
@@ -15,8 +18,6 @@
     width: 480px;
     border: $mainColor 2px solid;
     padding: 5px;
-    // margin-left: auto;
-    // margin-right: auto;
     @include justify-content();
 }
 
@@ -32,6 +33,6 @@
 }
 
 @mixin image-transparent-cover() {
-    -webkit-filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
-    filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);   
+    -webkit-filter: brightness(50%) sepia(1)  hue-rotate(calculateRotation(104, 238, 148)) saturate(calculateSaturationFilter(104, 238, 148)) brightness(calculateBrightness(104, 238, 148));
+    filter: brightness(50%) sepia(1)  hue-rotate(calculateRotation(104, 238, 148)) saturate(calculateSaturationFilter(104, 238, 148)) brightness(calculateBrightness(104, 238, 148));   
 }

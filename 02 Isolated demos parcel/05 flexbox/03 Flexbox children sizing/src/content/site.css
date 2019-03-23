@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    color: #ffaa33;
+}
+
+div.flex-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.flex-container div {
+    flex-basis: 200px;
+    flex-shrink: 0;
+}
+
+.flex-container div:first-child {
+    background-color: rgb(245, 226, 229);
+}
+
+.flex-container div:nth-child(2) {
+    background-color: rgb(240, 235, 235);
+}
+
+.flex-container div:nth-child(3) {
+    background-color: rgb(205, 223, 247);
+}

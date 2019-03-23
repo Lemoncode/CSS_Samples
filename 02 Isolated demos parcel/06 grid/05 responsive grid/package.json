@@ -1,0 +1,18 @@
+{
+  "name": "demos",
+  "version": "1.0.0",
+  "description": "Current demos for Lemoncode Master 16/17",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass"
+  },
+  "author": "Jaime Salas",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-open": "^2.0.0",
+    "gulp-sass": "3.0.0"
+  }
+}

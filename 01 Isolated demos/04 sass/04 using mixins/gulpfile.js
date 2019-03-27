@@ -35,18 +35,8 @@ gulp.task('sass', () =>
         .pipe(gulp.dest(options.cssCompile))
 );
 
-// gulp.task('copy', function () {
-//     gulp.src('./node_modules/bootstrap-sass/assets/javascripts/bootstrap.js')
-//         .pipe(gulp.dest('src/js'));
-
-//     gulp.src('./node_modules/jquery/dist/jquery.js')
-//         .pipe(gulp.dest('src/js'));
-// })
-
 gulp.task('watch', function () {
     gulp.watch(options.sassFolder, ['sass']);
 });
 
 gulp.task('default', ['connect', 'open', 'watch']);
-
-

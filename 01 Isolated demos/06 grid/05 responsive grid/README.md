@@ -200,6 +200,6 @@ body {
 
 ```diff main.scss
 +@media screen and (max-width: 47.9rem) {
-+    @include small-resolution;
++    @include small-resolution;o
 +}
 ```

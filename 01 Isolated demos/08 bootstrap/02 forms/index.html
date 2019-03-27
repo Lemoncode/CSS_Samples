@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LEMONCODE CSS PLAYGROUND</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+  <header class="container-fluid">
+    <div class="col" style="background:lightblue">
+      <h2>Gestor de infracciones</h2>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <form role="form">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-xl-5">
+                <div class="form-group row">
+                    <label for="user" class="col-sm-2 col-form-label">User</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="user" placeholder="User">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label" for="password">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control is-invalid" placeholder="Password">
+                        <div class="invalid-feedback">
+                            Upper active
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="remember">
+                            <label class="form-check-label" for="remember">
+                                Remember password
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary float-right">
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+  </div>
+
+  <footer class="container-fluid">
+    <div class="col" style="background: Aqua">
+    Footer
+    <a href='/'>Home</a>
+    <div>
+  </footer>
+</body>
+</html>

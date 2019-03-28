@@ -1,21 +1,19 @@
 {
-  "name": "flexbox_demos",
+  "name": "grid_demos",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "parcel ./src/index.html"
   },
   "keywords": [
-    "Flexbox",
+    "Grid",
     "features"
   ],
   "author": "Jaime Salas",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-connect": "^5.5.0",
-    "gulp-open": "^3.0.1"
+    "parcel": "^1.12.3"
   }
 }

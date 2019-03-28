@@ -77,7 +77,7 @@ h1 {
 
 2. Now we force body to get the same height as the root element. We make margin to zero to avoid vertical scroll bar. 
 
-## If we run the application we will see a list of divs align on a single column. This column will get all the available width, since they are bloc elements.
+## If we run the application we will see a list of divs align on a single column. This column will get all the available width, since they are block elements.
 
 ### 1. The first property that we are going to play with is `justify content`.
 

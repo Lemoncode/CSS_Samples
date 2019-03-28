@@ -88,7 +88,7 @@ div.flex-container {
 
 * It makes it easier to know where your dimension is being set. Flex-basis is the ideal size for the element along the flex-direction if it has enough room.
 
-### 4. To figure out what happens when we have a surplus or a deficit of space, we need to understand `flex-grow` and `flex-shrink`.
+### 4. To figure out what happens when we have a plus or a deficit of space, we need to understand `flex-grow` and `flex-shrink`.
 
 * To make flex-grow and shrink easier to see, we are going to give each of these children a different flex-basis. First to 120, the second to 40 pixels, and the third to 100 pixels.
 
@@ -216,7 +216,7 @@ div.flex-container {
 ```diff
 .flex-container div {
 -   flex-basis: 0;
-+   flex-basis: 200;
++   flex-basis: 200px;
 }
 
 .flex-container div:first-child {

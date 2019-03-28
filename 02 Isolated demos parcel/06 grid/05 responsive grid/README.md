@@ -86,6 +86,11 @@ body {
 * We also have to associate the areas.
 
 ```diff main.scss
+@import "reset.scss";
++@import "layout.scss";
+
+....
+
 .main-display {
     flex-grow: 1;
 -   background-color: aquamarine;
@@ -200,6 +205,6 @@ body {
 
 ```diff main.scss
 +@media screen and (max-width: 47.9rem) {
-+    @include small-resolution;o
++    @include small-resolution;
 +}
 ```

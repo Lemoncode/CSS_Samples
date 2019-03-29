@@ -35,9 +35,10 @@
 ```
 
 ```css
-@import 'https://fonts.googleapis.com/css?family=Raleway';
-@import 'http://fonts.googleapis.com/css?family=Share:400,700';
-@import 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700s';
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('http://fonts.googleapis.com/css?family=Share:400,700');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700s');
+
 
 html {
     font-family: 'Raleway', sans-serif;

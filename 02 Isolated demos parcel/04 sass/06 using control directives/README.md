@@ -76,3 +76,41 @@
     @include calculate-columns(6);
 }
 ```
+
+### 4. It seems to work, but at the smallest resolution, or borders disappear, this means that the _.col-1_ isn't calculated. This is due to _@for_, it doesn't enter in. Lets fix this.
+
+```scss
+/*diff*/
+@mixin calculate-columns($columns: 1) {
+    @if($columns > 1) {
+        @include multiple-columns($columns);
+    }
+    @else {
+        @include single-column;
+    }
+}
+/*diff*/
+
+/*diff*/
+@mixin multiple-columns($columns) {
+/*diff*/
+    @for $colIndex from 1 to $columns {
+        .col-#{$colIndex} {
+            width: 100% * ($colIndex / $columns);
+            float: left;
+            box-sizing: border-box;
+            border: 0.3em solid black;
+        }
+    }
+}
+/*diff*/
+@mixin single-column {
+    .col-1 {
+        width: 100%;
+        float: left;
+        box-sizing: border-box;
+        border: 0.3em solid black;
+    }
+}
+/*diff*/
+```

@@ -91,7 +91,7 @@
 +        }
 +      }
 +
-+      @media screen and (min-width: 1023px) and (max-width: 768px) {
++      @media screen and (max-width: 1023px) and (min-width: 768px) {
 +        .span-1 {
 +          width: 30%;
 +          background-color: red;

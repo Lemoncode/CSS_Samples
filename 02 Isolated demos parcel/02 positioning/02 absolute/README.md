@@ -57,7 +57,7 @@ body {
 }
 ```
 
-#### Notice that the blue box it's now inside a div with the conatiner class.
+#### Notice that the blue box it's now inside a div with the container class.
 
 ### 2. Apply postion absolute the blue box
 
@@ -133,7 +133,7 @@ body {
 }
 ```
 
-* Now all the set (container and box it's moving together). The blue box noves with container because it's inside. The other elements are responding because even the blue box is set to absolute, the container box is not, so they are responding to the changes on container.
+* Now all the set (container and box it's moving together). The blue box moves with container because it's inside. The other elements are responding because even the blue box is set to absolute, the container box is not, so they are responding to the changes on container.
 
 ### 8. Let's add property top to our blue box.
 
@@ -175,7 +175,7 @@ body {
 
 * It moves from normal move of document, going 'down' 150px due to the top magin applied.
 
-### 11. Let's remove the postion on container. 
+### 11. Let's remove the position on container. 
 
 ```diff
 .container {

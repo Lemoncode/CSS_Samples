@@ -11,7 +11,7 @@
 <html lang="en">
 <head>
     <title>Dynamic grid</title>
-    <link rel="StyleSheet" href="./content/compile_css/main.css" type="text/css" />
+    <link rel="StyleSheet" href="./sass/main.scss" />
 </head>
 <body>
     <div>
@@ -25,7 +25,7 @@
 </html>
 ``` 
 
-### 2. Our goal is create a dynamic grid system, where we can define dynamically the number of columns, not being tied a rigid number of columns as bootstrap system where we are tied to 12.
+### 2. Our goal is create a dynamic grid system, where we can define dynamically the number of columns, not being tied to a rigid number of columns as bootstrap system where we are tied to 12.
 
 
 ```scss _mixins.scss
@@ -64,7 +64,7 @@
     height: 12em;
 }
 
-@media (min-width: 250px) {
+@media (max-width: 500px) and (min-width: 0px) {
     @include calculate-columns(1);
 }
 

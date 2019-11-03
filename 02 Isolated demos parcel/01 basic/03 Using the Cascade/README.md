@@ -31,10 +31,11 @@
 * ie => internet options => General/Accessibility => Format documents with my own stylesheet
 * Edge http://stackoverflow.com/questions/32712919/how-do-i-show-microsoft-edges-user-agent-styles
 * Edge http://stackoverflow.com/questions/33060628/how-to-attach-user-css-to-microsoft-edge
+* Chrome: https://superuser.com/questions/52967/change-default-css-of-google-chrome/120790
 
 ## Steps:
 
-### 1. We start by applying this css.
+### 1. We start by applying this css and this html.
 
 ```css
 @import 'https://fonts.googleapis.com/css?family=Raleway';
@@ -57,6 +58,29 @@ a:hover {
     color: greenyellow;
 }
 ```
+
+```html
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Simple Selectors</title>
+  <link rel="stylesheet" type="text/css" href="./content/site.css">
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <div>A div</div>
+    <div>
+        <p>A paragraph inside a div</p>
+    </div>
+    <a href="#">Volver a Menu</a>
+</body>
+</html>
+
+```
+
 ### 2. Lets apply two consecutive styles to the p element, and see what happens.
 
 ```css

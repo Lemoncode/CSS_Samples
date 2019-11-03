@@ -202,7 +202,7 @@ div.flex-container {
 }
 ```
 
-### 4. To demostrtate what `baseline` does, lets remove the header of the last section.
+### 4. To demonstrate what `baseline` does, lets remove the header of the last section.
 
 ```diff index.html
 <!DOCTYPE html>

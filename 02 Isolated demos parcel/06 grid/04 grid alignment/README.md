@@ -31,7 +31,9 @@
     grid-template-areas: /*3*/
         "header header header header"
         "main main . sidebar"
-        "footer footer footer footer"
+        "footer footer footer footer";
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
 }
 
 .item-a {

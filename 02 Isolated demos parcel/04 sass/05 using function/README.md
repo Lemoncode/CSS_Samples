@@ -339,7 +339,7 @@ $baseColorBrightnes: 60;
 
 ```
 
-1. Teranry operator
+1. Ternary operator
 2. This way we can initialize a variable to 'null' value.
 3. This mathematical functions belongs to sass
 4. We can create collections in SASS, the way separaitin by comas. The floor function is from SASS as well

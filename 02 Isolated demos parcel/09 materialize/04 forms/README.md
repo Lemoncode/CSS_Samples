@@ -61,7 +61,7 @@ main {
 ```diff html
 +<div class="container">
 +  <div class="row">
-+    <form action="col s12"></form>
++    <form class="col s12"></form>
 +  </div>
 +</div>
 ```
@@ -72,7 +72,7 @@ main {
 ### 2. Now we are going to create the structure for the form sections.
 
 ```diff html
-<form action="col s12">
+<form class="col s12">
 +    <div class="row"></div>
 +    <div class="row"></div>
 +    <div class="row"></div>

@@ -50,7 +50,7 @@ div {
 }
 ```
 
-1. The paragraph inside of the div will be 25%, because the p element has to be the 50% relative to its parent, in this case the div.
+1. The paragraph inside of the div will be 50%, because the p element inherits parent width.
 
 ## Lets play with p element selector to specify values, by using different approachs
 

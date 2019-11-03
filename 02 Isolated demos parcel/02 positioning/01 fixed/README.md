@@ -114,6 +114,6 @@ body {
 }
 ```
 
-* On thing really important about fixed positioning is that the position it's realtive to browser's window!!!!.
+* On thing really important about fixed positioning is that the position it's relative to browser's window!!!!.
 
 #### Now the browser displays the vertical scroll bar. Now  when we play with the scrolbar we can watch the effect of fixed positioning. The element is always at the same distance, relative to browser window. It's going to stay always in the same point, so it's fixed. 

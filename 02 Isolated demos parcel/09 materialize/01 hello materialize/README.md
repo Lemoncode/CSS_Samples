@@ -98,7 +98,7 @@
 +<footer class="page-footer grey darken-3" style="position:fixed; bottom:0; width:100%;">
 +        <div class="footer-copyright">
 +            <div class="container">
-+                &copy Lemoncode
++                &copy; Lemoncode
 +            </div>
 +        </div>
 +    </footer>

@@ -1,0 +1,10 @@
+.banner-container {
+    text-align: center;
+    // background-color: black;
+    background-color: $mainColor;
+}
+
+.banner-container > img {
+    min-width: 30%;
+    max-height: 150px;
+}

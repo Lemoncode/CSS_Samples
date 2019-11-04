@@ -1,0 +1,11 @@
+.display {
+    display: flex;
+}
+
+.display .houses {
+    flex-grow: 2;
+}
+
+.display .characters {
+    flex-grow: 1;
+}

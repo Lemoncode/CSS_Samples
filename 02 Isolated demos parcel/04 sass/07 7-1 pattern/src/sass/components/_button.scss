@@ -1,0 +1,9 @@
+button {
+    @include default-border-radius();  
+    background-color:  grey-color-alpha(220, 0.9);
+    border: 1.5px solid grey-color-alpha(90, 0.4);
+}
+
+button:hover {
+    background-color: grey-color-alpha(220, 0.2);
+}

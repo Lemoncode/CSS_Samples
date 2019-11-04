@@ -8,6 +8,25 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header class="banner-container">
+        <img src="http://bazisgroup.com/wp-content/uploads/2017/07/game-of-thrones-photo.jpg" alt="Game of Thrones">
+    </header>
+    <div class="content">
+        <div class="search">
+            <div class="search search_item">
+                <span>House</span>
+                <input id="input-house" type="text" placeholder="house" />
+            </div>
+            <div class="search search_item">
+                <span>Character</span>
+                <input id="input-character" type="text" placeholder="character" />
+            </div>
+            <button id="search_button" class="search search_button">Search</button>
+        </div>
+        <div class="display">
+            <div class="houses" id="houses"></div>
+            <div class="characters" id="characters"></div>
+        </div>
+    </div>
 </body>
 </html>

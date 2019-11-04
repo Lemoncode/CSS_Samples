@@ -1,0 +1,9 @@
+input {
+    display: inline-block;
+    @include default-border-radius();
+    border: 1.5px solid grey-color-alpha(90, 0.4);;
+    background: grey-color-alpha(220, 0.16);
+    padding: 0.2rem 0.4rem;
+    margin-left: 0.5rem;
+    width: 15rem;   
+}

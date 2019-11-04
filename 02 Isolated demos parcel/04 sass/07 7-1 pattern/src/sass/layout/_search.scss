@@ -1,0 +1,12 @@
+.search {
+    display: flex;
+    flex-flow: row;
+}
+
+.search.search_item {
+    flex-grow: 2;
+}
+
+.search.search_button {
+    align-content: flex-end;
+}

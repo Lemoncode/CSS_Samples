@@ -133,7 +133,11 @@ body {
 }
 ```
 
-* Now all the set (container and box it's moving together). The blue box moves with container because it's inside. The other elements are responding because even the blue box is set to absolute, the container box is not, so they are responding to the changes on container.
+* Now container moves downward due to margin-top property. Remember, blue box is removed from the normal document flow, so the only element in the normal flow is the container. Because of that, body assumes top-margin's container too (click on body element on DevTools to see where it starts). 
+
+Blue box is positioned relative to its closest positioned ancestor, but there is no one, so it is placed relative to the initial containing block. That is reason why blue box is pushed downward too, because is linked to body (not to the container box). 
+
+If you select blue box element on DevTools and add a "top: 5px" property, you will see that it will move very close to the top of the view port. Blue box is absolutely tied to body and does not care about new container's margin-top.
 
 ### 8. Let's add property top to our blue box.
 
